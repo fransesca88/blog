@@ -1,6 +1,14 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 "use client";
 
+import {
+  ChevronDown,
+  ChevronRight,
+  LayoutDashboard,
+  MessageCircle,
+  NotebookPen,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -17,14 +25,14 @@ const DashboardSidebar = () => {
       label: "Dashboard",
       path: `${ADMIN_PATH}`,
       isParent: false,
-      icon: null,
+      icon: <LayoutDashboard size={16} />,
       children: [],
     },
     {
       label: "Posts",
       path: `${ADMIN_PATH}/posts`,
       isParent: true,
-      icon: null,
+      icon: <NotebookPen size={16} />,
       children: [
         {
           label: "Add New",
@@ -40,14 +48,14 @@ const DashboardSidebar = () => {
       label: "Comments",
       path: `${ADMIN_PATH}/comments`,
       isParent: false,
-      icon: null,
+      icon: <MessageCircle size={16} />,
       children: [],
     },
     {
       label: "Users",
       path: `${ADMIN_PATH}/users`,
       isParent: false,
-      icon: null,
+      icon: <Users size={16} />,
       children: [],
     },
   ];
@@ -71,13 +79,14 @@ const DashboardSidebar = () => {
                 >
                   <Link
                     href={nav.path}
-                    className={`${pathname === nav.path ? "active" : ""}`}
+                    className={`${pathname === nav.path ? "active" : ""} flex flex-row items-center gap-2`}
                   >
+                    {nav?.icon}
                     {nav.label}
                   </Link>
 
                   <button type="button" onClick={toggleChild}>
-                    expand
+                    {child ? <ChevronDown /> : <ChevronRight />}
                   </button>
                 </div>
 
@@ -98,8 +107,9 @@ const DashboardSidebar = () => {
               <li key={nav.label} className="mb-4">
                 <Link
                   href={nav.path}
-                  className={`${pathname === nav.path ? "active" : ""}`}
+                  className={`${pathname === nav.path ? "active" : ""} flex flex-row items-center gap-2`}
                 >
+                  {nav?.icon}
                   {nav.label}
                 </Link>
               </li>

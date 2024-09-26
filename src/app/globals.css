@@ -15,7 +15,7 @@ body {
 }
 
 .active {
-  @apply text-blue-500 bg-blue-50 block w-full px-4 py-3 rounded-md font-semibold border-solid border-l-blue-500 border-l-4;
+  @apply text-blue-500 bg-blue-50 w-full px-4 py-3 rounded-md font-semibold border-solid border-l-blue-500 border-l-4;
 }
 
 .child-active {
@@ -24,6 +24,24 @@ body {
 
 .ck.ck-balloon-panel.ck-balloon-panel_position_border-side_right.ck-powered-by-balloon {
   display: none;
+}
+
+@media print {
+  body {
+    margin: 0 !important;
+  }
+}
+
+.main-container {
+  font-family: "Lato";
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editor-container_classic-editor .editor-container__editor {
+  min-width: 795px;
+  max-width: 795px;
 }
 
 h1 {
@@ -40,4 +58,20 @@ h3 {
 
 h4 {
   @apply font-bold;
+}
+
+.text-tiny {
+  @apply text-xs;
+}
+
+.text-small {
+  @apply text-sm;
+}
+
+.text-big {
+  @apply text-2xl;
+}
+
+.text-huge {
+  @apply text-3xl;
 }
