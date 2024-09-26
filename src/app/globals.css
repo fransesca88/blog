@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* html, */
-/* body { */
-/*   height: 100%; */
-/*   margin: 0; */
-/*   padding: 0; */
-/* } */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 html,
 body {
@@ -20,4 +20,24 @@ body {
 
 .child-active {
   @apply text-blue-500 font-semibold;
+}
+
+.ck.ck-balloon-panel.ck-balloon-panel_position_border-side_right.ck-powered-by-balloon {
+  display: none;
+}
+
+h1 {
+  @apply text-2xl font-bold;
+}
+
+h2 {
+  @apply text-xl font-bold;
+}
+
+h3 {
+  @apply text-lg font-bold;
+}
+
+h4 {
+  @apply font-bold;
 }

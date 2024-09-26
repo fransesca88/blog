@@ -175,11 +175,26 @@ const AdminPosts = () => {
     },
   ];
 
+  const paginationComponentOptions = {
+    noRowsPerPage: false,
+  };
+
+  const handleChange = ({ selectedRows }) => {
+    console.log("Selected Rows: ", selectedRows);
+  };
+
   return (
     <>
       <PageTitle title="Posts" description="List of your amazing blog posts" />
       <section id="post-data">
-        <DashboardDataTable columns={columns} data={data} pagination />
+        <DashboardDataTable
+          columns={columns}
+          data={data}
+          pagination
+          paginationComponentOptions={paginationComponentOptions}
+          selectableRows
+          onSelectedRowsChange={handleChange}
+        />
       </section>
     </>
   );

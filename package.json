@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-react": "^9.2.0",
+    "ckeditor5": "^43.1.1",
     "lucide-react": "^0.446.0",
     "next": "14.2.13",
     "react": "^18",
@@ -17,6 +19,7 @@
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.9",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.13",
     "eslint-plugin-tailwindcss": "^3.17.4",
