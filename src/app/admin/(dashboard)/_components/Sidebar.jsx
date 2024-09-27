@@ -40,7 +40,7 @@ const DashboardSidebar = () => {
         },
         {
           label: "Category",
-          path: `${ADMIN_PATH}/post/category`,
+          path: `${ADMIN_PATH}/posts/categories`,
         },
       ],
     },
@@ -67,7 +67,7 @@ const DashboardSidebar = () => {
   return (
     <aside className="m-5 hidden h-auto w-[18.75rem] rounded-lg border-2 border-solid border-gray-500/10 bg-white px-7 py-[2.375rem] shadow-sm lg:flex lg:flex-col lg:justify-between lg:gap-5">
       <header>
-        <p className="text-2xl font-black">Nata&apos;s Blog</p>
+        <p className="text-2xl font-bold">Nata&apos;s Blog</p>
       </header>
       <nav className="grow">
         <ul>
