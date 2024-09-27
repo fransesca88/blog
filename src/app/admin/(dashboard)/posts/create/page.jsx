@@ -69,7 +69,7 @@ const AdminCreatePost = () => {
         </div>
         <div className="flex w-full justify-end">
           <button className="button-primary" type="submit">
-            Submit
+            Add New Post
           </button>
         </div>
       </form>
